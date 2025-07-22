@@ -1,9 +1,68 @@
+body,
+html {
+  overflow-x: hidden;
+}
+
+/* Sticky behavior */
+/* .sticky {
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+} */
+
+/* Smooth background transition */
+.transition {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navbar-toggler {
+  border-color: #000;
+  /* visible border */
+}
+
+
+/* Transparent on Home page initially */
+.home-page .header_wrapper .navbar {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(0, 0, 0, 0) 100%);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* White on scroll for all */
+.header_wrapper .navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* White and shadow always on other pages */
+.other-page .header_wrapper .navbar {
+  background: white !important;
+  box-shadow: 0 .5rem .375rem -0.375rem rgba(0, 0, 0, 0.1) !important;
+}
+
+
 .header_wrapper .navbar {
   box-shadow: 0 .5rem .375rem -0.375rem rgb(39, 38, 38);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(0, 0, 0, 0) 100%);
 
   padding: .9375rem 0;
-  transition: background 0s ease-in-out 0s, margin-top 0s ease-in-out 0s, opacity 0s ease-in-out 0s;
+  transition: background-color 0s ease-in-out 0s, margin-top 0s ease-in-out 0s, opacity 0s ease-in-out 0s;
 }
+
+.navbar {
+  z-index: 1030;
+  /* Bootstrap's default is 1030 */
+}
+
 
 .header_wrapper .nav-item {
   margin: 0 .625rem;
@@ -15,10 +74,79 @@
 
 .header_wrapper .nav-item .nav-link {
   color: white;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  /* changed from block */
+  white-space: nowrap;
+  /* added */
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* expanded */
 }
+
 
 .header_wrapper .nav-item .nav-link:hover,
 .header_wrapper .nav-item .nav-link:active {
+  background-color: #caa169;
+  color: white !important;
+
+}
+
+
+
+/* When scrolled down */
+.header_wrapper .navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Change nav link colors on scroll */
+/* .header_wrapper .navbar.scrolled .nav-link {
+  color: #000 !important;
+} */
+
+.header_wrapper .navbar.scrolled .nav-link:hover {
+  color: #caa169 !important;
+}
+
+.header_wrapper .navbar.scrolled .nav-link:active {
+  color: #ffffff !important;
+}
+
+.other-page .header_wrapper .navbar.scrolled .nav-link:active {
+  color: #ffffff !important;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Style after scrolling */
+.navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: #000 !important;
+}
+
+/* Apply solid background only on internal pages */
+.other-page .header_wrapper .navbar {
+  background: white !important;
+  box-shadow: 0 .5rem .375rem -0.375rem rgba(0, 0, 0, 0.1);
+}
+
+.other-page .header_wrapper .nav-link {
+  color: #000;
+}
+
+.other-page .header_wrapper .nav-link:hover,
+.other-page .header_wrapper .nav-link:active {
   color: #caa169;
 }
 
@@ -28,13 +156,147 @@
   border-radius: 50%;
 }
 
+.banner-header {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  padding-top: 260px !important;
+  padding-bottom: 148px !important;
+}
+
+.overlay[data-overlay-dark="5"] {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent black */
+}
+
+[data-overlay-dark="5"]:before {
+  opacity: 0.5;
+}
+
+[data-overlay-dark]:before {
+  background: #000000ad;
+}
+
+[data-overlay-dark]:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.banner-header .title {
+  font-size: 50px;
+  line-height: 60px;
+  /* font-family: "Gilda Display", serif; */
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.btn-fill {
+  background-color: #caa169 !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: bold !important;
+}
+
+.place-btn {
+  /* background-color: #caa169 !important;
+  color: white !important;
+  border: none !important; */
+  /* box-shadow: 0 .5rem .375rem -0.375rem rgb(44, 43, 43, 0.1) !important; */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease-in-out;
+
+  color: #caa169 !important;
+  background-color: white !important;
+}
+
+.place-btn:hover,
+.place-btn.active {
+  background-color: #caa169 !important;
+  /* slightly darker on hover/active */
+  color: white !important;
+}
+
+
+.btn-fill.book:hover {
+  background-color: #dcb57e !important;
+  color: rgb(247, 244, 232) !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease-in-out !important;
+  font-weight: bold;
+  font-size: 1.4rem !important;
+}
+
+.btn-fill:hover {
+  /* background-color: #caa169 !important;
+  box-shadow: 0 .5rem .375rem -0.375rem rgb(203, 201, 201) !important; */
+  background-color: #dcb57e !important;
+  color: rgb(247, 244, 232) !important;
+  box-shadow: none !important;
+
+  transition: all 0.3s ease-in-out !important;
+  font-weight: bold;
+  /* padding: 1.5rem !important; */
+  /* font-size: 1.5rem !important; */
+}
+
+.btn-nofill {
+  background-color: transparent !important;
+  color: #caa169 !important;
+  border: 1px solid #caa169 !important;
+  border-radius: 50px !important;
+}
+
+.btn-nofill:hover {
+  background-color: #caa169 !important;
+  color: white !important;
+  box-shadow: 0 .5rem .375rem -0.375rem rgb(203, 201, 201) !important;
+  transition: all 0.3s ease-in-out !important;
+  /* padding: 1.5rem !important; */
+}
+
 .hero {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80');
+  position: relative;
+  /* overflow: hidden; */
+  /* height: 50vh; */
+
+  @media (min-width: 1200px) {
+    height: 92vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .owl-carousel .overlay {
+    /* transform: translateY(-50%) !important; */
+  }
+}
+
+#backImage {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   background-size: cover;
   background-position: center;
-  height: 90vh;
-  position: relative;
+
+  @media (min-width: 1200px) {
+    height: calc(100vh - 73px);
+  }
+
+  @media (max-width: 576px) {
+    height: 50vh;
+  }
 }
 
 .hero .hero-forms {
@@ -48,13 +310,78 @@
 
 }
 
+
+.room-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Added transition for smooth hover effect */
+
+}
+
+.room-card:hover . img.object-cover {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+  display: block;
+
+}
+
+.room-card .p-3 {
+  padding: 1.25rem !important;
+}
+
+.room-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.gallery .room-overlay {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery .room-card:hover .room-overlay {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(16, 16, 16, 0.65);
+  /* Darker on hover */
+}
+
+.room-card:hover .room-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  transform: translateY(-5px);
+}
+
+
+.gallery .room-overlay h6 {
+  position: absolute;
+  bottom: 4.5rem;
+  /* adjust this to move up/down */
+  left: 3rem;
+  margin: 0;
+}
+
+
 .room-btn:hover,
 .room-btn:active {
   background-color: #caa169 !important;
   color: white !important;
-
-
 }
+
+
 
 /* .fnl .h1 {
   font-size: 3.75rem;
@@ -70,8 +397,8 @@
 }
 
 .icon-circle {
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
   background-color: #f5f5f5;
   border-radius: 50%;
   display: flex;
@@ -110,8 +437,13 @@
 .menu-navbar-nav .nav-link.active {
   background-color: #caa169;
   color: white !important;
-  border-radius: 15%;
-  padding: 10% 30%;
+  border-radius: 8px;
+  /* Optional: Looks cleaner than 15% */
+  padding: 0.5rem 1rem;
+  /* or adjust as needed */
+  display: inline-block;
+  /* ensures size matches content */
+  white-space: nowrap;
 }
 
 .room-btn.active {
@@ -124,35 +456,566 @@ footer .quick--links li {
   margin-bottom: 16px;
 }
 
+
 .footer--text_heading {
   position: relative;
+  display: inline-block;
+  /* ensures the underline aligns with text width */
+  margin-bottom: 2rem;
+  /* Optional: consistent spacing under the heading */
 }
 
 .footer--text_heading::after {
   content: "";
   display: block;
+  position: absolute;
+  bottom: -17px;
+  /* places it slightly below the text */
+  left: 0;
   width: 60px;
   height: 2px;
   background-color: #caa169;
-  position: absolute;
-  top: 42px;
-  left: 0;
 }
+
 
 .hello {
   height: 500px;
 }
 
-#booking-form {
-  background: rgba(0, 0, 0);
+
+
+
+.form-background {
+  background: transparent !important;
+  /* border-top: none !important;
+  border-bottom: none !important; */
+  border: none !important;
+  border-radius: 0 !important;
+  color: #caa169 !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
 }
 
-.form-label {
+.form-background::placeholder {
+  color: #caa169 !important;
+  opacity: 1;
+  /* Ensures the color is fully visible */
+}
+
+
+.checkin {
+  background: #caa169 !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+#new__book-styling {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  /* font-size: 1.2rem !important; */
+
+
+  i {
+    margin-left: 10px;
+  }
+}
+
+#new__book-styling:hover {
+  background-color: #dcb57e !important;
+  color: rgb(247, 244, 232) !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease-in-out !important;
+  font-weight: bold;
+  /* padding: .75rem !important; */
+  /* font-size: 1.2rem !important; */
+  transform: scale(1.05);
+
+}
+
+.owl-dots {
+  display: block !important;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.owl-dot.active {
+  background: #caa169;
+}
+
+
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .home-page .navbar-collapse {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .navbar .nav-link {
+    padding-left: 0;
+  }
+
+  .book-button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .book-button .btn {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+
+
+}
+
+
+/* BOOK NOW button styles on small screens */
+@media (max-width: 991.98px) {
+  .book-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .book-button .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    width: auto;
+    min-width: 140px;
+    max-width: 80%;
+    white-space: nowrap;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .room-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .room-card {
+    height: 250px;
+  }
+
+  .gallery .row {
+    margin-top: 0 !important;
+    --bs-gutter-y: 0.85rem !important;
+    /* reduces row gap to 12px */
+  }
+
+  .example button {
+    flex: 1 0 auto;
+  }
+}
+
+
+/* Make each carousel item fill hero space */
+.hero .owl-carousel .item,
+.hero-background {
+  height: 92vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay content on hero image */
+.container.overlay {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  z-index: 3;
+  padding: 1rem;
+  background: transparent;
   color: white;
 }
 
-.form-background {
-  background: transparent;
-   !important border: none;
-   !important;
+/* Booking form positioning */
+/* #booking-form {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 4;
+} */
+
+/* === WELCOME SECTION FIXES === */
+.welcome-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+}
+
+/* Optional: Responsive tweaks */
+@media (max-width: 768px) {
+  .container.overlay {
+    position: static;
+    text-align: center;
+    transform: none;
+    padding: 1rem;
+  }
+
+  /* 
+  #booking-form {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  #booking-form .row {
+    flex-direction: column;
+    gap: 1rem;
+  } */
+
+  .welcome-section .col-xl-4 {
+    text-align: center;
+  }
+
+  .welcome-section .col-xl-4 h1 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-section img {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+
+/* === Responsive Room Cards for Homepage Only === */
+.home-page #rooms .room-card {
+  height: auto;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.home-page #rooms .room-card img.object-cover {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.home-page #rooms .room-overlay {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-page #rooms .room-btn {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  align-self: flex-start;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .home-page #rooms .room-card img.object-cover {
+    height: 180px;
+  }
+
+  .home-page #rooms .room-btn {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-page #rooms .room-card img.object-cover {
+    height: 160px;
+  }
+
+  .home-page #rooms .room-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* === HOME PAGE ROOMS SECTION RESPONSIVE FIXES === */
+
+/* Only target .home-room-card to avoid affecting room-card elsewhere */
+.home-room-card {
+  height: 450px;
+}
+
+@media (max-width: 992px) {
+  .home-room-section .room-img>div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-room-card {
+    height: auto;
+    /* Allow auto height on small screens */
+  }
+
+  .home-room-section .room-img>div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home-room-section .room-overlay h6 {
+    font-size: 1.1rem;
+  }
+
+  .home-room-section .room-overlay small {
+    font-size: 0.95rem;
+  }
+}
+
+/* Optional: Prevent image stretch/crop issue */
+.home-room-section .room-card img.object-cover {
+  object-fit: cover;
+  height: 100%;
+}
+
+
+/* === Responsive fixes for Our Food & Library Sections === */
+
+@media (max-width: 767.98px) {
+
+  .food-section .row,
+  .library-section .row {
+    flex-direction: column;
+  }
+
+  .food-section .col-md-6,
+  .library-section .col-md-6 {
+    padding: 1.5rem !important;
+    text-align: center;
+  }
+
+  .food-section img,
+  .library-section img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .food-section h1,
+  .library-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .food-section a.btn,
+  .library-section a.btn {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .food-section .col-md-6,
+  .library-section .col-md-6 {
+    padding: 2rem !important;
+  }
+
+  .food-section h1,
+  .library-section h1 {
+    font-size: 2rem;
+  }
+
+  .food-section p,
+  .library-section p {
+    font-size: 0.95rem;
+  }
+
+  .food-section a.btn,
+  .library-section a.btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* GALLERY SECTION BASE */
+.gallery-section .gallery-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.gallery-img-wrapper {
+  height: 400px;
+  /* default height to match gallery-img */
+  display: flex;
+}
+
+.gallery-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.gallery-center {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+
+}
+
+/* Fix spacing between stacked images */
+.gallery-section .gallery-layout,
+.gallery-section .gallery-center {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Text styling */
+.gallery-section .gallery-center h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.gallery-section .gallery-center p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* Tablet / iPad screens (768px to 1200px) */
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  .gallery-section .gallery-img,
+  .gallery-section .gallery-img-wrapper {
+    height: 320px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767.98px) {
+
+  .gallery-section .gallery-layout,
+  .gallery-section .gallery-center {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  .gallery-section .gallery-center {
+    order: -1;
+    /* show text first */
+
+    padding: 0 1rem;
+  }
+
+  .gallery-section .gallery-center h1 {
+    font-size: 1.8rem;
+  }
+
+  .gallery-section .gallery-center p {
+    font-size: 0.95rem;
+  }
+
+  .gallery-section .gallery-img,
+  .gallery-section .gallery-img-wrapper {
+    height: 260px;
+  }
+}
+
+/* testomonial section */
+.testimonial .item img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.testimonial .item .m-4 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin: 1rem auto !important;
+}
+
+@media (max-width: 768px) {
+  .testimonial .item {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .testimonial p.m-4 {
+    margin: 1rem 0 !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .testimonial h5.m-4 {
+    margin: 0.5rem 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial .item .m-4 {
+    padding: 0 0.5rem !important;
+  }
+
+  .testimonial p.m-4 {
+    font-size: 0.9rem;
+  }
+
+  .testimonial h1 {
+    font-size: 1.5rem;
+  }
 }

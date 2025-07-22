@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- custom css  -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+      body {
+        font-family: 'Georgia', serif;
+        padding: 2rem;
+      }
+
+      .welcome-text {
+        color: #cc9966;
+        font-family: 'Cursive', sans-serif;
+        font-size: 1.5rem;
+      }
+
+      .hotel-name {
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .highlight-box {
+        border-left: 2px solid orange;
+      }
+
+
+
+      .filter-btn {
+        background-color: #dcb57e;
+        /* Warm brown tone */
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 8px 20px;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background-color: #ab8959ff;
+        /* Slightly lighter brown on hover */
+        color: #fff;
+        transform: scaleX(1.05);
+      }
+    </style>
+  </head>
+
+  <body class="other-page gallery p-0 bg-light">
+    <!-- navbar section -->
+    <header class="header_wrapper w-100 bg-white shadow-sm sticky-top z-3">
+      <nav class="navbar navbar-expand-lg px-xxl-5">
+        <div class="container-fluid">
+          <a class="navbar-brand text-dark" href="../index.html">
+            <img src="../images/crown.jpg" class="img-fluid logo mx-3" alt="logo" />
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav menu-navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../html/about-us.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="../html/gallery.html" target="_blank">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="../html/facilities.html">Facilities</a></li>
+              <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="../html/contact-us.html">Contact</a></li>
+            </ul>
+            <!-- Mobile Book Now -->
+            <div class="book-button d-lg-none mt-3 text-center w-100">
+              <a class="btn btn-fill text-white px-4 py-2" href="#">
+                BOOK NOW <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Desktop Book Now -->
+          <div class="book-button d-none d-lg-flex align-items-center">
+            <a class="btn btn-fill text-white d-flex align-items-center justify-content-center" href="#"
+              id="new__book-styling">
+              BOOK NOW <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- navbar section end -->
+
+    <!-- banner section -->
+    <section class="banner-header bg-fixed bg-img" data-overlay-dark="5"
+      style="background-image: url(../images/hotel-background.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="title fw-normal">Gallery</div>
+            <!--<div class="subtitle"></div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery section -->
+    <section class="">
+      <div class=" container my-auto py-5">
+        <div class="text-center mb-5">
+          <div class="welcome-text">welcome</div>
+          <div class="hotel-name">HOTEL THAMEL</div>
+        </div>
+        <div class="example">
+          <div class="d-flex  asdsa overflow-x-auto  justify-content-xl-center gap-3 mb-4 ">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="luxury">Luxury</button>
+            <button class="filter-btn" data-filter="small-suite">Small Suite</button>
+            <button class="filter-btn" data-filter="family">Family</button>
+            <button class="filter-btn" data-filter="hall">Hall</button>
+            <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-4 luxury gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/luxury-room1.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Luxury</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 small-suite gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/small-suite-1.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Small Suite</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 luxury gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/luxury-room-2.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Luxury</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 small-suite gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/small-suite-2.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Small Suite</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 hall gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/hall.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Hall</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 outdoor gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/outdoor-2.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Out Door</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 outdoor gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/outdoor.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Out Door</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 family gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="../images/family-room.jpg" alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Family Room</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 family gallery-item">
+            <div class="position-relative overflow-hidden rounded room-card abt-img">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
+                alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Family Room</h6>
+                <small class=" position-absolute bottom-0 pb-5 ps-5 ">$120 / night</small>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+    </section>
+    <!-- gallery section end -->
+
+    <!-- footer section -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container-fluid px-3 px-md-5">
+        <div class="row p-3 p-md-5 m-auto">
+          <!-- About Us -->
+          <div class="col-12 col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <h6 class="mb-5 fs-4 footer--text_heading">About Us</h6>
+            <ul class="list-unstyled quick--links">
+              <li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vel voluptatibus ratione sed quidem
+                  odit,
+                  laborum saepe recusandae quisquam..</p>
+              </li>
+              <li><i class="fa-solid fa-phone me-2"></i>(+01) 123 456 789</li>
+              <li><i class="fa-regular fa-envelope me-2"></i>info@hostelly.com</li>
+              <li><i class="fa-solid fa-location-dot me-2"></i>123 Street, City, Country</li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+            <h6 class="mb-5 fs-4 footer--text_heading">Quick Links</h6>
+            <ul class="list-unstyled quick--links">
+              <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+              <li><a href="#" class="text-white text-decoration-none">About us</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Reservation</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Attractive Spots</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Latest Blogs</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Contact us</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+            <h6 class="mb-5 fs-4 footer--text_heading">Our Services</h6>
+            <ul class="list-unstyled quick--links">
+              <li><a href="#" class="text-white text-decoration-none">Room Service</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Food & Drinks</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Spa & Wellness</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Gym & Fitness</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Swimming Pool</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Event Hosting</a></li>
+            </ul>
+          </div>
+
+          <!-- Subscribe -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <h6 class="mb-5 fs-4 footer--text_heading">Subscribe</h6>
+            <p class="mb-4">Get our exclusive offers</p>
+            <form class="d-flex flex-column flex-sm-row mb-4">
+              <input type="email" class="form-control rounded-end-0 mb-2 mb-sm-0" placeholder="Email">
+              <button class="btn btn-fill rounded-start-0 rounded-end-2">→</button>
+            </form>
+            <div>
+              <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="text-white"><i class="fa-brands fa-google"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full-width horizontal line -->
+        <hr class="border-light mx-0">
+
+        <!-- Footer Bottom Section -->
+        <div class="container-fluid px-3 py-1 px-md-5">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-center ">
+            <p class="mb-2 mb-md-0 text-center text-md-start">&copy; 2025 Hostelly. All rights reserved.</p>
+
+            <ul class="d-flex flex-wrap justify-content-center list-unstyled gap-3 mb-0">
+              <li><a href="#home" class="btn text-white btn-sm px-3">Home</a></li>
+              <li><a href="#rooms" class="btn text-white btn-sm px-3">Rooms</a></li>
+              <li><a href="#about" class="btn text-white btn-sm px-3">About Us</a></li>
+              <li><a href="#services" class="btn text-white btn-sm px-3">Services</a></li>
+              <li><a href="#gallery" class="btn text-white btn-sm px-3">Gallery</a></li>
+              <li><a href="#contact" class="btn text-white btn-sm px-3">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <script>
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      // Smooth scroll for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+    <!-- js for active filter buttons -->
+
+    <script>
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    </script>
+    <script src="/js/navbar.js"></script>
+
+  </body>
+
+</html>

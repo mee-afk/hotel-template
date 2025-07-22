@@ -13,54 +13,169 @@
     <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      /* HERO SECTION */
+      .hero .owl-carousel .item,
+      .hero-background {
+        height: 50vh;
+
+        @media (min-width: 1200px) {
+          height: calc(100vh - 73px);
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .overlay {
+          position: static !important;
+          text-align: center;
+          padding: 1.5rem 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .overlay h1 {
+          font-size: 1.8rem !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+
+        #booking-form {
+          position: static !important;
+          transform: none !important;
+          width: 100% !important;
+          margin-top: 1rem;
+        }
+
+        #booking-form .row {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        #booking-form .col-md-3 {
+          border: none !important;
+          padding: 0 1rem !important;
+        }
+
+        .checkin {
+          height: auto !important;
+        }
+      }
+
+
+
+      /* WELCOME SECTION */
+
+      @media (max-width: 768px) {
+        .welcome-section .col-xl-4 {
+          text-align: center;
+        }
+
+        .welcome-section .col-xl-4 h1 {
+          font-size: 1.8rem;
+        }
+
+        .welcome-section img {
+          width: 100% !important;
+          height: auto;
+        }
+
+        .welcome-section .position-relative {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .welcome-section .position-relative img:last-child {
+          position: static !important;
+          margin-top: 1rem;
+          width: 100% !important;
+        }
+      }
+
+
+      /* Responsive adjustments */
+      @media (max-width: 991.98px) {
+        .rooms-section .col-xl-4 {
+          flex: 0 0 50%;
+          max-width: 50%;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .rooms-section .col-xl-4 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .rooms-section .d-flex.justify-content-between.align-items-center {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+
+        .rooms-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .rooms-section hr {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        .room-card .btn {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+
 
   </head>
 
-  <body>
+  <body class="home-page">
     <!-- navbar section -->
-    <header class=" header_wrapper position-absolute w-100 z-1">
-      <nav class="navbar navbar-expand-lg px-5">
-        <div class="container-fluid">
 
-          <a class="navbar-brand text-white" href="#"><img src="images/room-cleaning.jpg" class="img-fluid logo mx-3"
-              alt="logo">Hostily
+    <header class="header_wrapper w-100 z-3">
+      <nav class="navbar navbar-expand-lg px-5 navbar-transparent position-absolute top-0 start-0 w-100 transition">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="index.html">
+            <img src="images/crown.jpg" class="img-fluid logo mx-3" alt="logo" />Hostily
           </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- <span class="navbar-toggler-icon"></span> -->
-            <i class="fa-solid fa-bars-staggered "></i>
+            <i class="fa-solid fa-bars-staggered text-white"></i>
           </button>
 
-          <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
-            <ul class="navbar-nav menu-navbar-nav ">
-              <li class="nav-item ">
-                <a class="nav-link  active" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pages">Pages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#rooms">Rooms</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#blog">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-              <!-- <li class="nav-item ">
-                <a class="main-btn" href="#">Book Now</a>
-              </li> -->
-
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav menu-navbar-nav">
+              <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="html/about-us.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="html/gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="html/facilities.html">Facilities</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#blog">Blog</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="html/contact-us.html">Contact</a></li>
             </ul>
+            <!-- Mobile Book Now -->
+            <div class="book-button d-lg-none mt-3 text-center w-100">
+              <a class="btn btn-fill text-white px-4 py-2" href="#">
+                BOOK NOW <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+            </div>
           </div>
-          <!-- <a class="navbar-brand" href="#">Book now
-          </a> -->
-          <a class="btn btn-warning text-white p-3 justify-content-center  " href="#">BOOK NOW<i
-              class="fa-solid fa-arrow-right px-3"></i></a>
-        </div>
 
+          <!-- Desktop Book Now -->
+          <div class="book-button d-none d-lg-flex align-items-center">
+            <a class="btn btn-fill text-white d-flex align-items-center justify-content-center" href="#"
+              id="new__book-styling">
+              BOOK NOW <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -70,73 +185,108 @@
     <!-- Hero Section -->
     <section class="hero mb-5">
 
-      <!-- hero text overlay -->
-      <div class="container overlay position-absolute top-50 text-white  ">
-        <h1 class="display-4 fw-bold text-start">The Best Hotel</h1>
-        <h1 class="display-4 fw-bold"> Deals in the World</h1>
-        <!-- <a href="#" class="btn btn-warning mt-4">BOOK NOW</a>-->
+      <div class="owl-carousel owl-theme owl--home z-1">
+        <div class="item bg-red text-center px-5 hero-background position-relative" id="backImage"
+          style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80');">
+          <!-- hero text overlay -->
+          <div class="container overlay position-absolute z-2 top-50 text-white ps-5 ms-5 ">
+            <h1 class="display-4 fw-bold text-start ps-5 ms-5">The Best Hotel</h1>
+            <h1 class="display-4 fw-bold text-center pe-5 me-5"> Deals in the World</h1>
+            <!-- <a href="#" class="btn btn-warning mt-4">BOOK NOW</a>-->
+          </div>
+
+        </div>
+        <div class="item bg-red text-center px-5 hero-background position-relative" id="backImage"
+          style="background-image: url('images/hotel-background.jpg');">
+          <!-- hero text overlay -->
+          <div class="container overlay position-absolute z-2 top-50 text-white ps-5 ms-5 ">
+            <h1 class="display-4 fw-bold text-start ps-5 ms-5">The Best Hotel</h1>
+            <h1 class="display-4 fw-bold text-center pe-5 me-5"> Deals in the World</h1>
+            <!-- <a href="#" class="btn btn-warning mt-4">BOOK NOW</a>-->
+          </div>
+
+          slide 21
+        </div>
+        <div class="item bg-red text-center px-5 hero-background position-relative" id="backImage"
+          style="background-image: url('images/hotel-background-2.jpg');">
+          <!-- Content can go here if needed -->
+          <!-- hero text overlay -->
+          <div class="container overlay position-absolute z-2 top-50 text-white ps-5 ms-5 ">
+            <h1 class="display-4 fw-bold text-start ps-5 ms-5">The Best Hotel</h1>
+            <h1 class="display-4 fw-bold text-center pe-5 me-5"> Deals in the World</h1>
+            <!-- <a href="#" class="btn btn-warning mt-4">BOOK NOW</a>-->
+          </div>
+
+        </div>
       </div>
 
+
       <!-- hero forms -->
-      <form action="" id="booking-form" class="position-absolute start-50 translate-middle-x bottom-0 ">
-        <div class="row p-5 mx-5">
-          <div class="col-md-3">
-            <label for="check-in" class="form-label">Check-in</label>
-            <input type="date" class="form-control form-background" id="check-in">
-          </div>
-          <div class="col-md-3">
-            <label for="check-out" class="form-label">Check-out</label>
-            <input type="date" class="form-control form-background " id="check-out">
-          </div>
-
-          <div class="col-md-3">
-            <label for="rooms" class="form-label">Room</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+      <form action="" id="booking-form" class="position-absolute z-2 start-50 w-75 translate-middle-x bottom-0 ">
+        <div class="row bg-black">
+          <div class="col-md-3 col-sm-6 px-4 py-4">
+            <label for="checkin" class="text-white">Check-in</label>
+            <input type="text" id="checkin" class="form-control p-0 form-background" placeholder="mm/dd/yyyy">
 
           </div>
-          <div class="col-md-3">
-            <button type="submit">CHECK NOW</button>
+          <div class="col-md-3 col-sm-6  px-4 py-4  border-start">
+
+            <label for="checkout" class="text-white">Check-out</label>
+            <input type="text" id="checkout" class="form-control p-0 form-background" placeholder="mm/dd/yyyy">
+          </div>
+
+          <div class="col-md-3 col-sm-6 px-4 py-4 border-start">
+            <label for="rooms" class="text-white">Room</label>
+            <div class="position-relative">
+              <select class="form-select form-background p-0 pe-5" aria-label="Default select example">
+                <!-- <option selected class="text-dark">1 room</option> -->
+                <option class="text-dark" value="1">1 room</option>
+                <option class="text-dark" value="2">2 rooms</option>
+                <option class="text-dark" value="3">3 rooms</option>
+              </select>
+              <span class="position-absolute top-50 end-0 translate-middle-y me-3" style="pointer-events: none; ">
+                <i class="fa fa-chevron-down text-secondary"></i>
+              </span>
+            </div>
+
+          </div>
+          <div class="col-md-3 col-sm-6  p-0 border-start">
+            <button type="submit"
+              class="form-background position-relative translate-middle-y top-50 checkin w-100 h-100 fw-bold btn-fill book">CHECK
+              NOW</button>
           </div>
         </div>
       </form>
       <!-- hero forms end -->
 
-
     </section>
-
-
+    <!-- Hero Section end -->
 
     <!-- Welcome Section -->
-    <section class="container py-5 my-5">
+    <section class="container welcome-section py-5 my-5">
       <div class="row mt-5 py-5">
         <!-- text section -->
 
-        <div class=" col-4 mt-4 text-start">
+        <div class="col-xl-4  mt-4 text-start">
           <p style="color: #caa169;">Accomodations</p>
-          <h2 class="mb-3">Welcome Our Hotels And Resorts</h2>
+          <h1 class="mb-3">Welcome Our Hotels And Resorts</h1>
           <p class="mb-4 py-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum veniam provident
             accusantium
             eaque nesciunt, blanditiis minus quo ipsum illo, fugit architecto accusamus ea natus voluptatem! Ab tempore
             reiciendis assumenda quidem!.</p>
 
 
-          <a class="btn btn-warning text-white px-4 py-3  justify-content-center  text-center ps-5
+          <a class="btn btn-fill text-white px-4 py-3  justify-content-center  text-center ps-5
           " href="#">READ MORE<i class="fa-solid fa-arrow-right  px-3"></i></a>
         </div>
-
-
         <!-- images section -->
-        <div class=" col-8 mt-5">
+        <div class=" col-xl-8  mt-5">
           <div class="position-relative">
             <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Room" width="600">
+              alt="Room" width="600" class=" border  border-warning border-5">
             <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Room" class=" position-absolute z-1 end-0 bottom-50 " width="450" />
+              alt="Room" class=" position-absolute z-1 end-0 bottom-50 border-white border border-5 rounded-bottom-3 "
+              width="450" />
           </div>
 
         </div>
@@ -145,62 +295,89 @@
     </section>
 
     <!-- Rooms Section -->
-    <section class="py-5  bg-light " style=" box-shadow: 0 .5rem .375rem -0.375rem rgb(0, 0, 0/40%);">
-      <div class="container my-5">
+    <section class="py-5 my-5  bg-light home-room-section"
+      style=" box-shadow: 0 .5rem .375rem -0.375rem rgb(0, 0, 0/40%);">
+      <div class="container py-5 my-5">
 
         <!-- rooms section nav -->
-        <div class="d-flex  justify-content-between align-items-center mb-4">
-          <h3>Our Luxury Rooms</h3>
-          <ul class="d-flex flex-row list-unstyled gap-4">
-            <li><a href="#rooms" class="btn bg-white py-2 px-4 py-2 px-4 btn-sm room-btn active ">All Rooms</a></li>
-            <li><a href="#rooms" class="btn bg-white py-2 px-4  btn-sm room-btn">Luxury
-              </a></li>
-            <li><a href=" #rooms" class="btn bg-white py-2 px-4  btn-sm room-btn">Single </a></li>
-            <li><a href="#" class="btn bg-white py-2 px-4  btn-sm ">Small Suite</a></li>
-            <li><a href="#" class="btn bg-white py-2 px-4  btn-sm "> Family</a></li>
-          </ul>
-
+        <div class="pb-3 pt-0 text-center">
+          <p style="color: #caa169;">Sub heading</p>
+          <h1 class="mb-3">Our Rooms</h1>
         </div>
 
         <!-- room section images -->
-        <div class="row g-3 ">
-          <div class="col-3"><img width="100%" height="100%"
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Gallery 1"></div>
-          <div class="col-6"><img width="100%" height="100%"
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Gallery 2"></div>
-          <div class="col-3"><img width="100%" height="100%"
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Gallery 3"></div>
-          <div class="col-6"><img width="100%" height="100%"
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Gallery 4"></div>
-          <div class="col-6"><img width="100%" height="100%"
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Gallery 5"></div>
-        </div>
-      </div>
+        <div class="row g-3  room-img">
+          <div class="col-12 col-lg-4 col-xl-3 h-100">
+            <div class="position-relative overflow-hidden rounded room-card home-room-card "> <img
+                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
+                alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Small Suite</h6>
+                <small>$120 / night</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-6 h-100">
+            <div class="position-relative overflow-hidden rounded room-card home-room-card">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
+                alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Small Suite</h6>
+                <small>$120 / night</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-3 h-100">
+            <div class="position-relative overflow-hidden rounded room-card home-room-card">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
+                alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Small Suite</h6>
+                <small>$120 / night</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 h-100">
+            <div class="position-relative overflow-hidden rounded room-card home-room-card">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
+                alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Small Suite</h6>
+                <small>$120 / night</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 h-100">
+            <div class="position-relative overflow-hidden rounded room-card home-room-card">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
+                alt="Gallery 1" class="img-fluid w-100 h-100 object-cover">
+              <div class="room-overlay text-white p-4">
+                <h6 class="mb-0">Small Suite</h6>
+                <small>$120 / night</small>
+              </div>
+            </div>
+          </div>
+
     </section>
 
     <!-- our foods section -->
-    <section class="py-5 my-5 bg-light">
-      <div class="container my-5">
+    <section class="py-5 my-5 food-section">
+      <div class="container  my-5">
         <div class="row g-4">
           <div class="col-md-6">
             <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1080&q=80"
               class="img-fluid mb-3" alt="Restaurant">
 
           </div>
-          <div class="col-md-6 p-5 m-auto">
+          <div class="col-md-6 p-5 m-auto ">
             <p style="color: #caa169;">Our Food</p>
-            <h4 class="display-2 my-4 fw-normal fst-normal">Restaurant Silo</h4>
+            <h1 class="display-4 my-4 fw-normal fst-normal">Restaurant Silo</h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores impedit commodi
               aperiam
               ratione
               animi? Vitae esse exercitationem dolorem.</p>
-            <a href="#" class="btn btn-outline-warning my-4 fs-4 px-4 py-3 ">READ MORE<i
-                class="fa-solid fa-arrow-right  px-3"></i></a>
+            <a href="#" class="btn btn-nofill my-4 px-3 py-2 fw-semibold  ">READ MORE<i
+                class="fa-solid fa-arrow-right  ps-3"></i></a>
           </div>
         </div>
       </div>
@@ -208,18 +385,18 @@
     <!-- our foods section end -->
 
     <!-- library section -->
-    <section class="py-5 my-5 bg-light fnl">
-      <div class="container my-5">
+    <section class="py-5 my-5 bg-light library-section">
+      <div class="container py-5 my-5">
         <div class="row g-4">
-          <div class="col-md-6 p-5 m-auto">
+          <div class="col-md-6 p-5 m-auto ">
             <p style="color: #caa169;">Read Our Books</p>
-            <h4 class="display-2 my-4 fw-normal fst-normal">The Library</h4>
+            <h1 class="display-4 my-4 fw-normal fst-normal">The Library</h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores impedit commodi
               aperiam
               ratione
               animi? Vitae esse exercitationem dolorem.</p>
-            <a href="#" class="btn btn-outline-warning my-4 fs-4 px-4 py-3 ">READ MORE<i
-                class="fa-solid fa-arrow-right  px-3"></i></a>
+            <a href="#" class="btn btn-nofill my-4  px-3 py-2 fw-semibold  ">READ MORE<i
+                class="fa-solid fa-arrow-right  ps-3"></i></a>
           </div>
           <div class="col-md-6">
             <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1080&q=80"
@@ -232,12 +409,16 @@
     <!-- library section end -->
 
     <!-- Facilities -->
-    <section class="py-5 ">
-      <div class="container py-5">
-        <div class="row">
+    <section class="py-5 my-5 ">
+      <div class="container ">
+        <div class="pb-4 pt-0 text-center">
+          <p style="color: #caa169;">Sub heading</p>
+          <h1 class="mb-3">Our Facilities</h1>
+        </div>
+        <div class="row ">
           <!-- Service Item -->
-          <div class="col-md-4">
-            <div class="service-box">
+          <div class="col-md-4 ">
+            <div class="service-box py-3">
               <div class="icon-circle">
                 <img src="images/room-cleaning.jpg" alt="Room Cleaning">
               </div>
@@ -249,7 +430,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="service-box">
+            <div class="service-box py-3">
               <div class="icon-circle">
                 <img src="images/room-cleaning.jpg" alt="Room Wifi">
               </div>
@@ -261,7 +442,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="service-box">
+            <div class="service-box py-3">
               <div class="icon-circle">
                 <img src="images/room-cleaning.jpg" alt="Pick & Drop">
               </div>
@@ -274,7 +455,7 @@
 
           <!-- Repeat for second row -->
           <div class="col-md-4">
-            <div class="service-box">
+            <div class="service-box py-3">
               <div class="icon-circle">
                 <img src="/images/room-cleaning.jpg" alt="Room Cleaning">
               </div>
@@ -286,7 +467,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="service-box">
+            <div class="service-box py-3">
               <div class="icon-circle">
                 <img src="images/room-cleaning.jpg" alt="Room Wifi">
               </div>
@@ -298,7 +479,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="service-box">
+            <div class="service-box py-3">
               <div class="icon-circle">
                 <img src="images/room-cleaning.jpg" alt="Pickup & Drop">
               </div>
@@ -316,27 +497,32 @@
     <!-- Facilities end-->
 
     <!-- Gallery section -->
-    <section class="py-5  bg-light " style=" box-shadow: 0 .5rem .375rem -0.375rem rgb(0, 0, 0/40%);">
-      <div class="container my-5 ">
-        <div class=" row g-3 ">
-          <div class=" col-md-4 d-flex flex-column gap-2"><img width="100%" height="70%"
+    <section class="py-5 my-5 bg-light gallery-section"
+      style=" box-shadow: 0 .5rem .375rem -0.375rem rgb(0, 0, 0/40%);">
+      <div class="container my-5 py-5 ">
+        <div class=" row g-2 ">
+          <div
+            class=" col-md-4 px-1 gallery-layout d-flex flex-column g-3  position-relative overflow-hidden rounded  ">
+            <img class=" gallery-img"
               src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Gallery 1"><img width="100%" height="40%"
+              alt="Gallery 1"><img class=" gallery-img"
               src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
               alt="Gallery 1"></div>
-          <div class=" col-md-4 d-flex flex-column gap-2 text-center">
-            <h3>Our Gallery</h3>
+          <div class=" col-md-4 gallery-center d-flex flex-column g-3 py-0  text-center px-1 position-relative  rounded
+            ">
+            <h1>Our Gallery</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sit, vitae ullam sunt
               saepe illo.
             </p>
-            <a href="#" class="btn btn-warning mb-4 mx-auto p-3">VIEW ALL Categories</a>
-            <img width="100%" height="100%"
+            <a href="html/gallery.html" class="btn btn-fill mb-2 mx-auto py-2 px-4">VIEW ALL Categories</a>
+            <img class=" gallery-img h-100 "
               src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
               alt="Gallery 1">
           </div>
-          <div class=" col-md-4 d-flex flex-column gap-2"><img width="100%" height="50%"
+          <div class="px-1 col-md-4 gallery-layout d-flex flex-column g-3  position-relative  rounded  ">
+            <img class=" gallery-img"
               src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
-              alt="Gallery 1"><img width="100%" height="50%"
+              alt="Gallery 1"><img class=" gallery-img"
               src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80"
               alt="Gallery 1"></div>
 
@@ -346,8 +532,12 @@
     <!-- Gallery section end -->
 
     <!-- Testimonial Section -->
-    <section class="py-5 testimonial text-center my-5">
-      <div class="container">
+    <section class="py-5 my-5 testimonial text-center my-5">
+      <div class="container py-5 ">
+        <div class="py-5 pt-0">
+          <p style="color: #caa169;">Sub heading</p>
+          <h1 class="mb-3">Testimonials heading</h1>
+        </div>
         <div class="owl-carousel owl-theme owl--testimonial">
           <div class="item bg-red text-center px-5">
             <div class="reviews  ">
@@ -402,14 +592,84 @@
 
     <!-- Testimonial Section end -->
 
-    <!-- maps section -->
-    <div class="hello bg-danger">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1808208.4173706914!2d81.05182994689879!3d27.727872714083748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x39eb19cbbeac9357%3A0x8f35a679609cb5b9!2sPulchowk%2C%20Lalitpur!3m2!1d27.6782363!2d85.31685279999999!4m5!1s0x39a09a104f620a3b%3A0xec5b3bc6756ce0d8!2sKathgodam%2C%20Haldwani%2C%20Uttarakhand%2C%20India!3m2!1d29.269326399999997!2d79.54411979999999!5e0!3m2!1sen!2snp!4v1751967623330!5m2!1sen!2snp"
-        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <!-- maps section end -->
+
+    <!-- Where to Find Us Section -->
+    <section class="bg-light py-5 pt-2 ">
+      <div class="container py-5 my-5 text-center">
+        <div class="py-3 ">
+          <p style="color: #caa169;">Sub heading</p>
+          <h2 class=" mb-4">Where to Find Us</h2>
+        </div>
+
+        <!-- Scrollable Location Options -->
+        <div class="d-flex overflow-auto mb-4 gap-2 flex-nowrap justify-content-center pb-3" id="placeList">
+          <button class="btn place-btn px-3 flex-shrink-0 text-nowrap active" data-place="hotel">Our
+            Hotel</button>
+          <button class="btn place-btn px-3 flex-shrink-0 text-nowrap" data-place="pulchowk">Pulchowk</button>
+          <button class="btn place-btn px-3 flex-shrink-0 text-nowrap" data-place="kathgodam">Kathgodam</button>
+          <button class="btn place-btn px-3 flex-shrink-0 text-nowrap" data-place="temple">Nearby
+            Temple</button>
+          <button class="btn place-btn px-3 flex-shrink-0 text-nowrap" data-place="lake">Beautiful
+            Lake</button>
+        </div>
+
+        <!-- Display Area -->
+        <div class="card shadow">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <!-- Removed gutter (g-0) -->
+
+              <!-- Left Image Column -->
+              <div class="col-md-7">
+                <img id="placeImage" class="img-fluid rounded-0 w-100"
+                  style="object-fit: cover; height: 100%; max-height: 600px;" alt="Place Image">
+              </div>
+
+              <!-- Right Info Column -->
+              <div class="col-md-5 d-flex flex-column justify-content-center text-start text-dark"
+                style="background-color: #f5eee1; padding: 3rem; min-height: 450px;">
+
+                <span class="text-uppercase text-muted small mb-2">Featured Destination</span>
+                <h3 id="placeTitle" class="fw-bold mb-3">Majestic Fort</h3>
+                <div class="mb-2">
+                  <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <small class="text-muted">4.0 · Jaipur, India</small>
+                </div>
+                <p id="placeDesc" class="text-secondary lead">Experience history and heritage at its finest...</p>
+                <div class="align-items-baseline d-flex gap-3 justify-content-end mt-4">
+                  <button id="readMoreBtn" class="btn btn-link p-0 mb-3 text-decoration-none text-primary"
+                    style="width: fit-content; display: none;">Read More</button>
+                  <button id="getHereBtn" class="btn btn-fill py-2 ">
+                    <i class="bi bi-geo-alt-fill "></i>Get Directions
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Map Modal -->
+      <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="mapModalLabel">Location Map</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="ratio ratio-16x9">
+                <iframe id="modalMap" src="" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- footer section -->
     <footer class="bg-dark text-white pt-5 pb-3">
       <div class="container-fluid ">
@@ -457,13 +717,13 @@
             <p class="mb-4">Get our exclusive offers</p>
             <form class="d-flex mb-4 ">
               <input type="email" class="form-control rounded-end-0" placeholder="Email">
-              <button class="btn btn-warning rounded-start-0">→</button>
+              <button class="btn btn-fill rounded-start-0 rounded-end-2">→</button>
             </form>
             <div class="mt-3 mb-4">
               <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
               <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#" class="text-white"><i class="fa-brands fa-google"></i></a>
+              <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
 
             </div>
           </div>
@@ -495,29 +755,45 @@
 
     <!-- carousel js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/carousel.js">
+
+    </script>
+
+    <!-- js for maps -->
+    <script src="js/maps.js"></script>
+
+    <script src="js/navbar.js"></script>
+
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLink = document.querySelector(".navbar-brand");
+        const baseURL = window.location.origin;
+        navLink.href = `${baseURL}/project/index.html`; // Correct template literal
+
+        // Add active class based on click
+        const navItems = document.querySelectorAll(".nav-item .nav-link");
+
+        navItems.forEach(link => {
+          link.addEventListener('click', () => {
+            navItems.forEach(item => item.classList.remove('active'));
+            link.classList.add('active');
+          });
+        });
+      });
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script>
-      $('.owl--testimonial').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: 1,
-        navText: [
-          '<i class="fa fa-arrow-left"></i>',
-          '<i class="fa fa-arrow-right"></i>'
-        ],
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 3
-          },
-          1000: {
-            items: 1
-          }
-        }
-      })
+      $(function () {
+        $("#checkin").datepicker({
+          dateFormat: "mm/dd/yy"
+        });
+        $("#checkout").datepicker({
+          dateFormat: "mm/dd/yy"
+        });
+      });
     </script>
   </body>
-
 
 </html>
